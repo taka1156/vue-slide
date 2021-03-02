@@ -9,14 +9,11 @@
   </head>
   <body>
     <script>
-      const repo_name = 'vue3-ts-slide';
       const l = window.location;
       const port = l.port ? ":" + l.port : "";
+      const path_name = l.pathname.split("/").filter((p) => p !== '');
       l.replace(
-        `${l.protocol}//${l.hostname}/${repo_name}/${port}/?p=${l.pathname
-          .split("/")
-          .slice(0, 2)
-          .join("/")}`
+        `${l.protocol}//${l.hostname}/${path_name[0]}/${port}/?p=${path_name[1]}`
       );
     </script>
   </body>
