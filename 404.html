@@ -9,10 +9,11 @@
   </head>
   <body>
     <script>
-      let l = window.location;
-      let port = l.port ? ":" + l.port : "";
+      const repo_name = 'vue3-ts-slide';
+      const l = window.location;
+      const port = l.port ? ":" + l.port : "";
       l.replace(
-        `${l.protocol}//${l.hostname}${port}/?p=${l.pathname
+        `${l.protocol}//${l.hostname}/${repo_name}/${port}/?p=${l.pathname
           .split("/")
           .slice(0, 2)
           .join("/")}`
